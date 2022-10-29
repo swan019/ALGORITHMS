@@ -1,4 +1,5 @@
 # ALGORITHMS
+// sort 0s, 1s, and 2s
 
 void DNF(int arr[], int n)
 {
