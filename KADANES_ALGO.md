@@ -1,18 +1,18 @@
-# ALGORITHMS
-
-int kadanes(int arr[], int n)
-{
-    int maxi = INT_MIN;
-    int sum = 0;
-    for(int i = 0; i < n; ++i)
-    {
-        sum = sum + arr[i];
-        
-        maxi = max(maxi, sum);
-        
-        if(sum < 0){ sum = 0; }
-    }
+int maxSumSubarray(vector<int> arr) {
     
-    return sum;
-
+	//TC O(n) & Space Complexity O(1)
+	int cs=0;
+	int largestSum=INT_MIN;
+ 
+	for(int i=0;i<arr.size();i++){
+		
+		cs=cs+arr[i];
+		if(cs<arr[i])
+			cs=arr[i];
+ 
+		largestSum=max(largestSum,cs);
+	}
+ 
+ 
+	return largestSum;
 }
